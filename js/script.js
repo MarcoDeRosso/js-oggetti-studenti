@@ -24,35 +24,46 @@ var classroom = {
     students: [{
             Name: "Diego",
             Surname: "Ogeid",
-            Age: 19
+            Age: 19,
         },
 
 
         {
             Name: "Paolo",
             Surname: "Oloap",
-            Age: 19
+            Age: 19,
         },
 
 
         {
             Name: "Sara",
             Surname: "Aras",
-            Age: 19
+            Age: 19,
         },
 
 
         {
             Name: "Andrea",
             Surname: "Aerdna",
-            Age: 19
+            Age: 19,
         }
     ]
-}
+};
+
+
+var userName = prompt("Inserisci il tuo nome");
+var userSurname = prompt("Inserisci il tuo cognome");
+var userAge = parseInt(prompt("Inserisci la tua età"));
+
+classroom.students.push({
+    Name: userName,
+    Surname: userSurname,
+    Age: userAge
+})
 
 for (var i = 0; i < classroom.students.length; i++) {
     for (var key in classroom.students[i]) {
-        console.log(key, classroom.students[i][k]);
-        output.innerHTML += "\n" + k + " :" + classroom.students[i][k];
+        console.log(key, classroom.students[i][key]);
+        output.innerHTML += "\n" + key + " :" + classroom.students[i][key];
     }
 }
