@@ -7,13 +7,14 @@ Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare
 PARTE 3
 Dare la possibilità all’utente, attraverso 3 prompt() - uno per ciascuna proprietà - di aggiungere UN SOLO oggetto studente inserendo nell’ordine: nome, cognome e età.
 */
-
 var student = {
-    name: "Diego",
-    surname: "Ogeid",
+    Name: "Diego",
+    Surname: "Ogeid",
     age: 19
 };
 
+var output = document.getElementById("example");
 for (var k in student) {
-    console.log(student[k])
+    console.log(student[k]);
+    output.innerHTML += "\n" + k + " :" + student[k];
 };
